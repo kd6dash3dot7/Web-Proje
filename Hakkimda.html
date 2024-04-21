@@ -10,7 +10,7 @@
   </head>
   <body>
     <nav id="desktop-nav">
-      <div class="logo"><img src="images/agj1.png" /></div>
+      <div class="logo"><img src="assets/agj1.png" /></div>
       <div>
         <ul class="nav-links">
           <li><a href="#about">Hakkımda</a></li>
@@ -21,7 +21,7 @@
       </div>
     </nav>
     <nav id="hamburger-nav">
-      <div class="logo"><img src="images/agj1.png" /></div>
+      <div class="logo"><img src="assets/agj1.png" /></div>
       <div class="hamburger-menu">
         <div class="hamburger-icon" onclick="toggleMenu()">
           <span></span>
@@ -36,6 +36,99 @@
         </div>
       </div>
     </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/nakoshi.png" alt="Samet Güzel pfp" />
+      </div>
+      <div class="section__text">
+        <p class="section_-text__p1">Merhaba, Ben</p>
+        <h1 class="title">Samet Güzel</h1>
+        <p class="section__text__p2">
+          22 yaşındayım, Sakarya Üniversitesi Bilgisayar Mühendisliği<br />
+          öğrencisiyim. İlgi alanlarım figür koleksiyonu yapmak,<br />
+          video editlemek, çizim yapmak ve bunları insanlarla paylaşmak.
+        </p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('/assets/resume-smt.pdf')"
+          >
+            CV Görüntüle
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            İletişim
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn Profilim"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/samet-güzel-633391302/'"
+          />
+          <img
+            src="./assets/github.png"
+            alt="Github Profilim"
+            class="icon"
+            onclick="location.href='https://github.com/kd6dash3dot7'"
+          />
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <h1 class="title">Hakkımda</h1>
+      <p class="section__text__p1">Daha Fazlasını Öğrenin</p>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            id="figur"
+            src="./assets/figurlerim.jpeg"
+            alt="figur pic"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="experience icon"
+                class="icon"
+              />
+              <h3>Deneyim</h3>
+              <p>
+                Herhangi bir iş deneyimim olmadı <br />Backend alanına yönelmek
+                istiyorum
+              </p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="education icon"
+                class="icon"
+              />
+              <h3>Eğitim</h3>
+              <p>
+                Şehit Özcan Kan Fen Lisesi 2015-2019 <br />
+                SAÜ Bilgisayar Mühendisliği 2020-Günümüz
+              </p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo,
+              distinctio.
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#cv'"
+      />
+    </section>
     <script src="script.js"></script>
   </body>
 </html>
