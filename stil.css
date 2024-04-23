@@ -265,6 +265,8 @@ section {
 }
 
 .about-details-container {
+  position: absolute;
+  left: 5%;
   justify-content: center;
   flex-direction: column;
 }
@@ -276,6 +278,13 @@ section {
 
 .figur-pic {
   border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.3rem solid;
+}
+
+.drawing-vid {
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.3rem solid;
+  
 }
 
 .arrow {
@@ -285,16 +294,6 @@ section {
 }
 
 .details-container {
-  padding: 1.5rem;
-  flex: 1;
-  background: white;
-  border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
-  text-align: center;
-}
-.details-container1 {
-  position: relative;
   padding: 1.5rem;
   flex: 1;
   background: white;
@@ -316,7 +315,50 @@ section {
 }
 
 #figur {
-  height: 400px;
-  width: 800px;
+  height: 300px;
+  width: 600px;
   border-radius: 2rem;
+}
+
+/* CV BOLUMU */
+
+#cv {
+  position: relative;
+}
+
+.cv-sub-title {
+  color: rgb(85, 85, 85);
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.cv-details-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.article-container {
+  display: flex;
+  text-align: initial;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 2.5rem;
+  justify-content: space-around;
+}
+
+article {
+  display: flex;
+  position: relative;
+  right: 50px;
+  width: 20rem;
+  justify-content: space-around;
+  gap: 0.5rem;
+}
+
+article .icon {
+  position: relative;
+  left: 20px;
+  cursor: default;
 }
