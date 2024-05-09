@@ -362,3 +362,15 @@ article .icon {
   left: 20px;
   cursor: default;
 }
+
+.c-item {
+  height: 480px;
+
+
+}
+
+.c-img {
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.3);
+}
