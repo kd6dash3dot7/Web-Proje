@@ -1,5 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
-* {
+@import url("http://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+*{
   margin: 0;
   padding: 0;
 }
@@ -14,6 +15,7 @@ html {
 
 p {
   color: rgb(85, 85, 85);
+  font-family: "Poppins", sans-serif;
 }
 
 a,
@@ -284,7 +286,6 @@ section {
 .drawing-vid {
   border-radius: 2rem;
   border: rgb(53, 53, 53) 0.3rem solid;
-  
 }
 
 .arrow {
@@ -365,8 +366,6 @@ article .icon {
 
 .c-item {
   height: 480px;
-
-
 }
 
 .c-img {
