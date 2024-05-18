@@ -19,6 +19,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
+    <script defer src="form.js"></script>
   </head>
   <body>
     <nav id="desktop-nav">
@@ -27,7 +28,7 @@
         <ul class="nav-links">
           <li><a href="#about">Hakkımda</a></li>
           <li><a href="#cv">Eğitim</a></li>
-          <li><a href="#city">XXX</a></li>
+          <li><a href="#city">Londra</a></li>
           <li><a href="#contact">İletişim</a></li>
         </ul>
       </div>
@@ -228,9 +229,10 @@
                     alt="..."
                   />
                   <div class="carousel-caption d-none d-md-block">
-                    <h5>1.04%'lük büyüme oranıyla </h5>
-                    <p style="color: lightgray;" class="mt-5 fs-3">
-                     2024 Nüfusu 9,748,000 olan Londra, Avrupa'nın en kalabalık 3. şehridir
+                    <h5>1.04%'lük büyüme oranıyla</h5>
+                    <p style="color: lightgray" class="mt-5 fs-3">
+                      2024 Nüfusu 9,748,000 olan Londra, Avrupa'nın en kalabalık
+                      3. şehridir
                     </p>
                   </div>
                 </div>
@@ -242,17 +244,26 @@
                   />
                   <div class="carousel-caption d-none d-md-block">
                     <h5>Sadece İngiltere'nin başkenti değil</h5>
-                    <p style="color: lightgray;" class="mt-5 fs-3">
-                      Dünyanın en eski, harika şehirlerinden olan Londra yaklaşık 2 milenyumluk bir tarihe sahip.
+                    <p style="color: lightgray" class="mt-5 fs-3">
+                      Dünyanın en eski, harika şehirlerinden olan Londra
+                      yaklaşık 2 milenyumluk bir tarihe sahip.
                     </p>
                   </div>
                 </div>
                 <div class="carousel-item c-item">
-                  <img src="./assets/707fececab43fb003e832a36a2350da1.jpg" class="d-block w-100 c-img" alt="..." />
+                  <img
+                    src="./assets/707fececab43fb003e832a36a2350da1.jpg"
+                    class="d-block w-100 c-img"
+                    alt="..."
+                  />
                   <div class="carousel-caption d-none d-md-block">
                     <h5>Kültür Zenginliği</h5>
-                    <p style="color: lightgray;" class="mt-5 fs-3">
-                      Kültür çeşitliliği olarak 300 dilin konuşulduğu bu başkentte, dünyanın en iyi 10 müzesinden 3'ü, UNESCO'nun dünya miraslarından 4'ü(Tower of London, Maritime Greenwich, Westminster Palace ve Kew’s Royal Botanic Gardens) bulunuyor.
+                    <p style="color: lightgray" class="mt-5 fs-3">
+                      Kültür çeşitliliği olarak 300 dilin konuşulduğu bu
+                      başkentte, dünyanın en iyi 10 müzesinden 3'ü, UNESCO'nun
+                      dünya miraslarından 4'ü(Tower of London, Maritime
+                      Greenwich, Westminster Palace ve Kew’s Royal Botanic
+                      Gardens) bulunuyor.
                     </p>
                   </div>
                 </div>
@@ -284,6 +295,261 @@
             </div>
           </div>
         </div>
+      </div>
+    </section>
+    <section id="contact" class="text-white mx-5 mb-5">
+      <h2>İletişim Formu</h2>
+      <div
+        class="bg-dark container border border-secondary rounded shadow-lg"
+        id="form1"
+      >
+        <form
+          action="iletisim.php"
+          name="myForm"
+          class="needs-validation"
+          onsubmit="return validate();"
+          method="POST"
+        >
+          <div class="form-row my-3">
+            <div class="col-lg-4 my-3">
+              <label for="name">Ad Soyad:</label>
+              <input type="text" class="form-control" name="ad" id="name" />
+            </div>
+            <div class="col-lg-4 my-3">
+              <label for="email">Email:</label>
+              <input
+                type="text"
+                class="form-control"
+                name="email"
+                onchange="emailV();"
+              />
+              <div class="valid-feedback">Kriterlere uyuyor</div>
+              <div class="invalid-feedback">
+                Alan boş yada Girdiğiniz bilgiler E mail formatında DEĞİL!!
+              </div>
+            </div>
+            <div class="col-lg-4 my-3">
+              <label for="password">Şifre:</label>
+              <input
+                type="password"
+                class="form-control"
+                name="sifre"
+                onchange="sifreV();"
+              />
+              <div class="invalid-feedback">
+                Alan boş yada Şifre rakamdan başka karakter içeriyor
+              </div>
+              <div class="valid-feedback">Kriterlere Uyuyor</div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-lg-6 my-3">
+              <div class="form-row">
+                <h6>Hobileriniz</h6>
+              </div>
+              <div class="form-row">
+                <div class="col-md-3 custom-control custom-checkbox ml-4">
+                  <input
+                    class="custom-control-input"
+                    type="checkbox"
+                    name="sports[]"
+                    value="Video oyunu"
+                    id="vgame"
+                  />
+                  <label class="custom-control-label" for="vgame">
+                    Video Oyunu
+                  </label>
+                </div>
+                <div class="col-md-2 custom-control custom-checkbox ml-4">
+                  <input
+                    class="custom-control-input"
+                    type="checkbox"
+                    name="sports[]"
+                    value="Müzik"
+                    id="music"
+                  />
+                  <label class="custom-control-label" for="music">
+                    Müzik
+                  </label>
+                </div>
+                <div class="col-md-2 custom-control custom-checkbox ml-4">
+                  <input
+                    class="custom-control-input"
+                    type="checkbox"
+                    name="sports[]"
+                    value="Film"
+                    id="film"
+                  />
+                  <label class="custom-control-label" for="film"> Film </label>
+                </div>
+                <div class="col-md-2 custom-control custom-checkbox ml-4">
+                  <input
+                    class="custom-control-input"
+                    type="checkbox"
+                    name="sports[]"
+                    value="Gezi"
+                    id="gezi"
+                  />
+                  <label class="custom-control-label" for="gezi"> Gezi </label>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 my-3">
+              <div class="form-row">
+                <h6>En sevdiğiniz programlama dili</h6>
+              </div>
+              <div class="form-row">
+                <div class="col-md-3 custom-control custom-radio ml-4">
+                  <input
+                    type="radio"
+                    id="js"
+                    name="language"
+                    class="custom-control-input"
+                    value="javascript"
+                    checked
+                  />
+                  <label class="custom-control-label" for="js"
+                    >javascript</label
+                  >
+                </div>
+                <div class="col-md-2 custom-control custom-radio ml-4">
+                  <input
+                    type="radio"
+                    id="c++"
+                    name="language"
+                    class="custom-control-input"
+                    value="c++"
+                  />
+                  <label class="custom-control-label" for="c++">C++</label>
+                </div>
+                <div class="col-md-2 custom-control custom-radio ml-4">
+                  <input
+                    type="radio"
+                    id="c#"
+                    name="language"
+                    class="custom-control-input"
+                    value="c#"
+                  />
+                  <label class="custom-control-label" for="c#">c#</label>
+                </div>
+                <div class="col-md-2 custom-control custom-radio ml-4">
+                  <input
+                    type="radio"
+                    id="python"
+                    name="language"
+                    class="custom-control-input"
+                    value="python"
+                  />
+                  <label class="custom-control-label" for="python"
+                    >Python</label
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-lg-12 my-3">
+              <label for="addres">Adres</label>
+              <textarea class="form-control" name="addres" id="addres">
+              </textarea>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-lg-6 my-3">
+              <label for="sehir">Yaşadınız şehir</label>
+              <select name="sehirler" class="form-control" id="sehir">
+                <option value="0">------</option>
+                <option value="1">Adana</option>
+                <option value="2">Adıyaman</option>
+                <option value="3">Afyonkarahisar</option>
+                <option value="4">Ağrı</option>
+                <option value="5">Amasya</option>
+                <option value="6">Ankara</option>
+                <option value="7">Antalya</option>
+                <option value="8">Artvin</option>
+                <option value="9">Aydın</option>
+                <option value="10">Balıkesir</option>
+                <option value="11">Bilecik</option>
+                <option value="12">Bingöl</option>
+                <option value="13">Bitlis</option>
+                <option value="14">Bolu</option>
+                <option value="15">Burdur</option>
+                <option value="16">Bursa</option>
+                <option value="17">Çanakkale</option>
+                <option value="18">Çankırı</option>
+                <option value="19">Çorum</option>
+                <option value="20">Denizli</option>
+                <option value="21">Diyarbakır</option>
+                <option value="22">Edirne</option>
+                <option value="23">Elazığ</option>
+                <option value="24">Erzincan</option>
+                <option value="25">Erzurum</option>
+                <option value="26">Eskişehir</option>
+                <option value="27">Gaziantep</option>
+                <option value="28">Giresun</option>
+                <option value="29">Gümüşhane</option>
+                <option value="30">Hakkâri</option>
+                <option value="31">Hatay</option>
+                <option value="32">Isparta</option>
+                <option value="33">Mersin</option>
+                <option value="34">İstanbul</option>
+                <option value="35">İzmir</option>
+                <option value="36">Kars</option>
+                <option value="37">Kastamonu</option>
+                <option value="38">Kayseri</option>
+                <option value="39">Kırklareli</option>
+                <option value="40">Kırşehir</option>
+                <option value="41">Kocaeli</option>
+                <option value="42">Konya</option>
+                <option value="43">Kütahya</option>
+                <option value="44">Malatya</option>
+                <option value="45">Manisa</option>
+                <option value="46">Kahramanmaraş</option>
+                <option value="47">Mardin</option>
+                <option value="48">Muğla</option>
+                <option value="49">Muş</option>
+                <option value="50">Nevşehir</option>
+                <option value="51">Niğde</option>
+                <option value="52">Ordu</option>
+                <option value="53">Rize</option>
+                <option value="54">Sakarya</option>
+                <option value="55">Samsun</option>
+                <option value="56">Siirt</option>
+                <option value="57">Sinop</option>
+                <option value="58">Sivas</option>
+                <option value="59">Tekirdağ</option>
+                <option value="60">Tokat</option>
+                <option value="61">Trabzon</option>
+                <option value="62">Tunceli</option>
+                <option value="63">Şanlıurfa</option>
+                <option value="64">Uşak</option>
+                <option value="65">Van</option>
+                <option value="66">Yozgat</option>
+                <option value="67">Zonguldak</option>
+                <option value="68">Aksaray</option>
+                <option value="69">Bayburt</option>
+                <option value="70">Karaman</option>
+                <option value="71">Kırıkkale</option>
+                <option value="72">Batman</option>
+                <option value="73">Şırnak</option>
+                <option value="74">Bartın</option>
+                <option value="75">Ardahan</option>
+                <option value="76">Iğdır</option>
+                <option value="77">Yalova</option>
+                <option value="78">Karabük</option>
+                <option value="79">Kilis</option>
+                <option value="80">Osmaniye</option>
+                <option value="81">Düzce</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-lg-12 mt-3 mb-5">
+              <input class="btn btn-primary" value="Temizle" type="reset" />
+              <input type="submit" class="btn btn-primary" value="Gonder" />
+            </div>
+          </div>
+        </form>
       </div>
     </section>
     <script

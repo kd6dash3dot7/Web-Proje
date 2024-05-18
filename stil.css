@@ -3,6 +3,7 @@
 *{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -373,3 +374,11 @@ article .icon {
   object-fit: cover;
   filter: brightness(0.3);
 }
+
+#contact h2 {
+  font-size: 40px;
+  color: black;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
