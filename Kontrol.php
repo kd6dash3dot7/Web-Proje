@@ -11,14 +11,14 @@
         }
         else{
             echo "<script>
-            window.location='Login.html';
+            window.location='index.html';
             alert('Yanlış şifre girildi lütfen tekrar deneyiniz');
             </script>";
         }
     }
     else {
         echo "<script>
-            window.location='Login.html';
+            window.location='index.html';
             alert('Yalnış email veya şifre lütfen tekrar deneyiniz');
             </script>";
     }
